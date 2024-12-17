@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
+    <title>User Profile</title>
+</head>
+<body>
+
+   <h3 th:text="'Welcome ' + ${username} + '!'"></h3>
+   <p><a th:href="@{/profile/profileDetails}">View Profile</a></p>
+   <p><a th:href="@{/conlang}">Create a New Conlang!</a></p>
+
+<!--    display existing languages-->
+
+</body>
+</html>

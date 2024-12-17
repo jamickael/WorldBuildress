@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
+    <title>New Profile</title>
+</head>
+<body>
+
+    <h3>Create a New Profile</h3>
+    <p>Enter the fields below to create an account with WorldBuildress</p>
+    <form method="POST" th:action="@{/profile/newProfile}">
+        <label>Username<input type="text" name="username" th:value="${username}"/></label>
+        <label>Email<input type="email" name="email" th:value="${email}"/></label>
+        <label>Password<input type="password" name="password"/></label>
+        <label>Verify Password<input type="password" name="verify" /></label>
+
+        <input type="submit" value="Submit"/>
+
+        <p th:text="${error}"></p>
+    </form>
+
+</body>
+</html>
